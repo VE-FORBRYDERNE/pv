@@ -957,8 +957,8 @@ void pv_display(pvstate_t state, long double esec, long long sl,
 		pv_crs_update(state, display);
 		state->display_visible = 1;
 	} else {
-		write(STDERR_FILENO, display, strlen(display));
 		write(STDERR_FILENO, "\r", 1);
+		write(STDERR_FILENO, display, strlen(display));
 		state->display_visible = 1;
 	}
 
